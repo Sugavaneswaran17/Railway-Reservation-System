@@ -1,0 +1,42 @@
+{% extends "navigation.html" %}
+{% load static %}
+{% block a %}
+<style>
+    input[type=text][type=password]{
+    border-radius:8px;
+    width:600px;
+    height:16px;
+    }
+</style>
+{% if error %}
+<script>
+    alert('Logged in successfully');
+    window.location='{% url 'dashboard' %}';
+</script>
+{% endif %}
+
+{% if error2 %}
+<script>
+    alert('Logged in successfully');
+    window.location='{% url 'admindashboard' %}';
+</script>
+{% endif %}
+
+{% if error3 %}
+<script>
+    alert('Username & Password are not Correct');
+    window.location='{% url 'login_customer' %}';
+{% endif %}
+
+<center>
+    <div style="color:Black;border:1px solid white;border-radius:8px;background-color:white;padding:50px">
+        <h3><strong>Login to your account</strong></h3><hr>
+        <form  method="post" action="">
+            {% csrf_token %}
+            User Name:<br><input type="text" required placeholder="Enter user name" name="uname" style="border-radius:8px;width:600px;height:35px;"><br>
+            Password:<br><input type="password" required placeholder="Enter password" name="pwd" style="border-radius:8px;width:600px;height:35px;"><br>
+                    <input type="submit" value="login" style="color:white;border-radius:8px;width:100px;height:35px;background-color:#333;border:1px solid Black">
+        </form>
+    </div>
+</center>
+{% endblock %}

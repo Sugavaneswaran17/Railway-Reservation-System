@@ -30,17 +30,31 @@ It Facilities the entire process of ticketing,from inquiry and booking to cancel
 # Getting Started
 
         1.Clone the repository:
+        
         git clone https://github.com/Sugavaneswaran17/Railway-Reservation-System
 
         2.Set up the Django environment:
+        
         django-admin startproject Railway_Reservation_system
         cd Railway_Reservation_system
         python manage.py startapp Railway_Reservation_system_app
         python manage.py runserver
 
         3.Apply migrations and create a superuser:
+        
         python manage.py migrate
         python manage.py createsuperuser
+
+        4.Run the development server:
+
+        python manage.py runserver
+
+        5.Access the applicatin at
+
+        http://localhost:8000
+        and the admin panel at
+        http://localhost:8000/admin.
+        
 
         
         

@@ -27,4 +27,23 @@ It Facilities the entire process of ticketing,from inquiry and booking to cancel
 
     10. Customer Support: Provides assistance through chat, email, or phone support for resolving queries and issues.
 
+# Getting Started
+
+        1.Clone the repository:
+        git clone https://github.com/Sugavaneswaran17/Railway-Reservation-System
+
+        2.Set up the Django environment:
+        django-admin startproject Railway_Reservation_system
+        cd Railway_Reservation_system
+        python manage.py startapp Railway_Reservation_system_app
+        python manage.py runserver
+
+        3.Apply migrations and create a superuser:
+        python manage.py migrate
+        python manage.py createsuperuser
+
+        
+        
+        
+
 
